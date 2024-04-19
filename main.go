@@ -13,7 +13,9 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	text, _ := reader.ReadString('\n')
 
+	text = strings.ToLower(text)
 	text = strings.Replace(text, "\n", "", -1)
+	
 	counts := make(map[rune]int)
 	totalChars := 0
 
